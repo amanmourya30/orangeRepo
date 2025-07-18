@@ -20,17 +20,7 @@ public class BaseTest {
 		BrowserFactory.quitBrowser(driver);
 	}
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
 	
 	ConfigDataProvider config= new ConfigDataProvider();
 }
