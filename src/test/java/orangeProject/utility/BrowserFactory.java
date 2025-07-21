@@ -29,7 +29,7 @@ public class BrowserFactory {
 
 		driver.manage().window().maximize();
 		driver.get(appUrl);
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 
 		return driver;
 	}

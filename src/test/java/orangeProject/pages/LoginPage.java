@@ -23,8 +23,14 @@ public class LoginPage {
 	@FindBy(id="submit")
 	WebElement submitBtn;
 	
+	@FindBy(linkText="Log out")
+	WebElement logoutBtn;
+	
+	public void logout() {
+		logoutBtn.click();
+		}
+	
 	public void performLogin(String usr, String pwd) {
-		loginPageLinkText.click();
 		username.sendKeys(usr);
 		password.sendKeys(pwd);
 		submitBtn.click();

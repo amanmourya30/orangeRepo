@@ -11,12 +11,12 @@ public class TestCaseDemo extends BaseTest {
 
 //	BaseTest bt = new BaseTest();
 	LoginPage lp = new LoginPage(driver);
-	
-	
+
 	@Test(dataProvider = "loginData")
 	public void TestCheck(String usr, String pwd) {
 		LoginPage lp = new LoginPage(driver);
 		lp.performLogin(usr, pwd);
+		lp.logout();
 	}
 
 	@DataProvider(name = "loginData")
