@@ -13,10 +13,27 @@ public class LoginPage {
 		PageFactory.initElements(driver, this);
 	}
 
-	@FindBy(xpath = "//span[normalize-space()='Sign in?']")
-	WebElement signInBtn;
+	@FindBy(xpath = "//a[contains(text(),'Test Login Page')]")
+	WebElement loginPageLinkText;
 	
-	public void clickSignInBtn() {
-		signInBtn.click();
+	@FindBy(id="username")
+	WebElement username;
+	@FindBy(id="password")
+	WebElement password;
+	@FindBy(id="submit")
+	WebElement submitBtn;
+	
+	@FindBy(linkText="Log out")
+	WebElement logoutBtn;
+	
+	public void logout() {
+		logoutBtn.click();
+		}
+	
+	public void performLogin(String usr, String pwd) {
+		username.sendKeys(usr);
+		password.sendKeys(pwd);
+		submitBtn.click();
 	}
+
 }
