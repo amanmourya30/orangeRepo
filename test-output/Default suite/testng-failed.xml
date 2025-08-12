@@ -6,7 +6,7 @@
       <class name="orangeProject.testcases.TestCaseDemo">
         <methods>
           <include name="tearDown"/>
-          <include name="TestCheck"/>
+          <include name="TestCheck" invocation-numbers="1"/>
           <include name="setup"/>
         </methods>
       </class> <!-- orangeProject.testcases.TestCaseDemo -->
